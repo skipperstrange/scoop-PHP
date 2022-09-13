@@ -1,4 +1,15 @@
-scoop
-=====
+# Scoop
+Customizable MVC framework with basic PHP
 
-scoopMVC/aztrasC fully customizable php framework
+## Requirements
+
+## Setup
+
+
+## Configurations
+
+
+### Routing
+
+
+
