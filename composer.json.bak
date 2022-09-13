@@ -1,0 +1,22 @@
+{
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "ClientPortal\\": "./"
+        },
+        "classmap": ["lib/classes/"],
+        "files": [        
+            "lib/config/config.php",
+            "lib/config/constants.heroku.php",
+            "lib/config/client-info.php",
+            "lib/config/db.php",
+            "lib/functions/sysfunctions.php",
+            "lib/functions/helperfunctions.php"
+        ]
+    },
+    "require-dev": {
+        
+    }
+}

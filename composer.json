@@ -1,0 +1,23 @@
+{
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "ClientPortal\\": "./"
+        },
+        "classmap": ["lib/classes/"],
+        "files": [        
+            "config/config.php",
+            "config/constants.php",
+            "config/routes.php",
+            "config/client-info.php",
+            "config/db.php",
+            "lib/functions/sysfunctions.php",
+            "lib/functions/helperfunctions.php"
+        ]
+    },
+    "require-dev": {
+        
+    }
+}
