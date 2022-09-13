@@ -70,7 +70,6 @@ if(PRETTY_URLS == true){
     }
 }
 
-
 if(file_exists(CONTROLLERS.$controller.'.php')){
     include_once CONTROLLERS.$controller.'.php';
 }else{
