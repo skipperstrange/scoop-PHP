@@ -12,16 +12,3 @@ define('TWITTER', '#');
 define('FACEBOOK', '#');
 define('INSTAGRAM', '#');
 define('LINKEDIN', '#');
-
-
-// App Metadata
-define('META_DATA', [
-    [
-    // Basic
-    'charset'=>"utf-8", 'http-equiv'=>"X-UA-Compatible",'content'=>"IE=edge"
-    ],
-    
-    [
-        'name'=>"keywords", 'content'=>"We stand by you, Vanguard Assurance"
-    ] 
-]);

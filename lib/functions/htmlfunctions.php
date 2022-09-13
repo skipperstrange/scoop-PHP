@@ -1,15 +1,13 @@
 <?php
-function generate_meta($attributes){
-    return create_tag_element('meta', $attributes,'',false);
+
+//generates generates a set tag for a for an array of attributes
+function generate_tag_group($tag,$attributes_array, $close = true){
+    foreach ($attributes_array as $info){
+        $tags .= create_tag_element($tag, $info,'',$close);
+    }
+    return $tags;
 }
 
-function generate_all_meta(){
-    $metadata = META_DATA;
-    foreach ($metadata as $info){
-        $metastring .= create_tag_element('meta', $info,'',false);
-    }
-    return $metastring;
-}
 
 
 // Base element creators
@@ -48,5 +46,4 @@ function generate_attributes($attributes = null){
         }      
     }
     return $attributes_collection;
-
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- Required meta tags -->
-    <?= generate_all_meta() ?>
+    <?= generate_tag_group('meta',$metadata) ?>
     <title><?= _title($pageTitle) ?></title>
 </head>
 
