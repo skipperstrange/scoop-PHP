@@ -1,11 +1,11 @@
 <?php
 
-define('CLIENT_NAME', 'Vanguard Assurance');
-define('WEBSITE', 'https://www.vanguardassurance.com');
+define('CLIENT_NAME', '');
+define('WEBSITE', '');
 define('SLOGAN', '');
-define('SUPPORT_EMAIL', 'info@vanguardassurance.com');
-define('SUPPORT_CONTACT_1', '+233 244 334 407');
-define('SUPPORT_CONTACT_2', '+233 302 213 940');
+define('SUPPORT_EMAIL', '');
+define('SUPPORT_CONTACT_1', '');
+define('SUPPORT_CONTACT_2', '');
 
 //SOCIAL MEDIA
 define('TWITTER', '#');
