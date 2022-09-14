@@ -25,9 +25,59 @@ $styles = [
 
 		// Theme CSS
 		["rel"=>"stylesheet", "href"=>CSS_PATH."theme.css"],
-		["rel"=>"stylesheet", "href"=>CSS_PATH."theme-elements.css"]
+		["rel"=>"stylesheet", "href"=>CSS_PATH."theme-elements.css"],
+
+		// Skin CSS
+		["rel"=>"stylesheet", "href"=>CSS_PATH."skins/default.css"], 
+
+		// Theme Custom CSS -->
+		["rel"=>"stylesheet", "href"=>CSS_PATH."custom.css"],
+
 ];
 
+$revolutionSliderCss = [
+		["rel"=>"stylesheet", "href"=>"vendor/rs-plugin/css/settings.css"],
+		["rel"=>"stylesheet", "href"=>"vendor/rs-plugin/css/layers.css"],
+		["rel"=>"stylesheet", "href"=>"vendor/rs-plugin/css/navigation.css"],
+];
+
+
+
+
+//JS Resources
 $js = [
+    ["src"=>VENDOR_PATH."modernizr/modernizr.min.js"]
+];
+
+$footerJs = [
+        ["src"=>VENDOR_PATH."jquery/jquery.min.js"],
+		["src"=>VENDOR_PATH."jquery.appear/jquery.appear.min.js"],
+		["src"=>VENDOR_PATH."jquery.easing/jquery.easing.min.js"],
+		["src"=>VENDOR_PATH."jquery.cookie/jquery.cookie.min.js"],
+		["src"=>VENDOR_PATH."popper/umd/popper.min.js"],
+		["src"=>VENDOR_PATH."bootstrap/js/bootstrap.min.js"],
+		["src"=>VENDOR_PATH."common/common.min.js"],
+		["src"=>VENDOR_PATH."jquery.validation/jquery.validate.min.js"],
+		["src"=>VENDOR_PATH."jquery.easy-pie-chart/jquery.easypiechart.min.js"],
+		["src"=>VENDOR_PATH."jquery.gmap/jquery.gmap.min.js"],
+		["src"=>VENDOR_PATH."jquery.lazyload/jquery.lazyload.min.js"],
+		["src"=>VENDOR_PATH."isotope/jquery.isotope.min.js"],
+		["src"=>VENDOR_PATH."owl.carousel/owl.carousel.min.js"],
+		["src"=>VENDOR_PATH."magnific-popup/jquery.magnific-popup.min.js"],
+		["src"=>VENDOR_PATH."vide/jquery.vide.min.js"],
+		["src"=>VENDOR_PATH."vivus/vivus.min.js"],
+    
+
+		[ "src"=>JS_PATH."theme.js"],
+
+        //Theme Custom -->
+		[ "src"=>JS_PATH."custom.js"],
+		
+		//Theme Initialization Files -->
+		[ "src"=>JS_PATH."theme.init.js"],
+
+		//Examples -->
+		//[ "src"=>JS_PATH."examples/examples.portfolio.js"]
+        
 ];
 

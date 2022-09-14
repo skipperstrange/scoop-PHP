@@ -13,7 +13,7 @@ if(file_exists(VIEWS.$view.'.php')){
     @include_once VIEWS.$view.'.php';
 }
 else{
-    @include_once VIEWS.'layouts'.DS.'_404.php';
+    include_once VIEWS.'layouts'.DS.'_404.php';
 }
 ?>
                 </div>

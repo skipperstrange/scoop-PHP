@@ -12,3 +12,4 @@ define('TWITTER', '#');
 define('FACEBOOK', '#');
 define('INSTAGRAM', '#');
 define('LINKEDIN', '#');
+define('GOOGLE_ANALYITICS_ID', '');

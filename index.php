@@ -70,10 +70,15 @@ if(PRETTY_URLS == true){
     }
 }
 
+if(MAINENANCE == true){
+    $controller = 'maintenance';
+    $view = "layouts".DS."maintenance";
+}
+
 if(file_exists(CONTROLLERS.$controller.'.php')){
     include_once CONTROLLERS.$controller.'.php';
 }else{
 //    die("$controller.php not found. Please make sure controller exists.");
 }
 
-@include_once VIEWS.'layouts'.DS.'layout.php';
+include_once VIEWS.'layouts'.DS.'layout.php';
