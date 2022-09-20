@@ -55,7 +55,7 @@ define('FILE_UPLOADS_PATH', 'public'.DS.'uploads'.DS);
 //MVC PATHS
 define('CONTROLLERS', 'Controllers' . DS);
 define('VIEWS', 'Views' . DS);
-define('SHARED', VIEWS. 'shared' . DS);
+define('PARTIALS', VIEWS. 'partials' . DS);
 define('LAYOUTS', VIEWS.DS.'layouts'.DS);
 
 //ResourcesURL
