@@ -48,6 +48,7 @@ if(MODE === 'development'){
 
 define('LIB', 'lib' . DS);
 define('STATIC_DATA', 'static'.DS);
+define('RESOURCES', 'resources'.DS);
 define('CONFIG_PATH','config'.DS);
 define('PUBLIC_PATH', 'public'.DS);
 define('FILE_UPLOADS_PATH', 'public'.DS.'uploads'.DS);

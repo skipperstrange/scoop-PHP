@@ -6,7 +6,7 @@ $query = @$_POST['query'] ? @$_POST['query']: '' ;
 $excludedFiles = ['.','..'];
 $dataFiles = [];
 
-$files = scandir(STATIC_DATA);
+$files = scandir();
 
 foreach($files as $file){
     if(!in_array($file, $excludedFiles)){
@@ -16,7 +16,7 @@ foreach($files as $file){
 
 if(in_array($ref.'.php', $dataFiles)){
     $dataFile = $ref.'.php';
-    include_once STATIC_DATA.$dataFile;
+    include_once .$dataFile;
 
     if(isset($data[$query])){
         $d = $data[$query];
@@ -35,6 +35,6 @@ if(in_array($ref.'.php', $dataFiles)){
    // echo $ref.'.php not found';
 }
 
-echo json_response($message, $status);
+;
 
-die();
+die(json_response($message, $status));

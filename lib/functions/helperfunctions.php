@@ -95,7 +95,6 @@ function post_get($post_or_get, $key = null){
         return null;
 }
 
-
 function json_response($message = null, $code = 200, $headers = [''])
 {
     // clear the old headers
