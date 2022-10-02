@@ -18,14 +18,23 @@ if(in_array($ref.'.php', $dataFiles)){
     $dataFile = $ref.'.php';
     include_once STATIC_DATA.$dataFile;
 
-    $data = get_defined_vars();
-    $d = $data[$query];
+    if(isset($data[$query])){
+        $d = $data[$query];
+        $status = 200;
+        $message['data'] = $d;
+    }
+    else{
+        $status = 404;
+        $message['data'] = 'Not Found';
+       // echo $ref.'.php not found';
+    }
+
 }else{
+    $status = 404;
+    $message['data'] = 'Data resource does not exist';
    // echo $ref.'.php not found';
 }
 
-$message = ['status_code'=>200, 'status'=>200, 'data'=>['message'=>$d]];
-
-echo json_response($message);
+echo json_response($message, $status);
 
 die();

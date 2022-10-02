@@ -55,6 +55,46 @@ function encryptValue($input) {
 	return sha1(md5($input));
 }
 
+//checks if post or get value is not null
+function check_post_get($post_or_get, $key = null, $value = null){
+    if(trim($post_or_get) == 'get' || trim($post_or_get) == 'g'){
+        if(isset($_GET[$key]) && trim($_GET[$key]) != ''){
+            if(trim($value) != ''){
+                if(trim($_GET[$key]) == "$value"){
+                    return true;
+                }
+                return false;
+            }
+                return true;
+            }
+    }
+    if(trim($post_or_get) == 'post' || trim($post_or_get) == 'p'){
+        if(isset($_POST[$key]) && trim($_POST[$key]) != ''){
+            if(trim($value) != ''){
+                if(trim($_POST[$key]) == "$value"){
+                    return true;
+                }
+                return false;
+            }
+                return true;
+            }
+    }
+    return false;
+}
+
+function post_get($post_or_get, $key = null){
+    if(check_post_get($post_or_get, $key)){
+        if(trim($post_or_get) == 'get' || trim($post_or_get) == 'g'){
+                        return $_GET[$key];
+        }
+
+        if(trim($post_or_get) == 'post' || trim($post_or_get) == 'p'){
+            return$_POST[$key];
+            }
+        }
+        return null;
+}
+
 
 function json_response($message = null, $code = 200, $headers = [''])
 {
