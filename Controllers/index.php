@@ -1,3 +1,3 @@
 <?php
 
-$pageTitle = "Welcome To Vanguard Assurance";
+$pageTitle = "Scoop-PHP";

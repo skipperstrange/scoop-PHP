@@ -16,7 +16,7 @@ foreach($files as $file){
 
 if(in_array($ref.'.php', $dataFiles)){
     $dataFile = $ref.'.php';
-    include_once .$dataFile;
+    include_once STATIC_DATA.$dataFile;
 
     if(isset($data[$query])){
         $d = $data[$query];
