@@ -1,6 +1,8 @@
 <?php
 
-
+function activeUrl(){
+    return $_GET['uri'];
+}
 
 // strips out escape characters
 function stripslashes_deep($value)
