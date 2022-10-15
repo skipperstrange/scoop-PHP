@@ -1,11 +1,21 @@
-RewriteEngine On
-
 #location of your website
+DirectoryIndex index.php index.html index.htm
+
+# Disable directory browsing 
+Options -Indexes
+
+# Hide the contents of directories
+IndexIgnore *
+
+RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
 
-#RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
-#RewriteRule ^(.*)$ - [E=BASE:%1]
+#RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+RewriteRule !(\.gif|\.png|\.jpe?g|\.css|\.js|\.php|^public/.*)$ index.php [nocase,last]
+
+# Force redirect to https
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
