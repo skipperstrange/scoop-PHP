@@ -47,7 +47,7 @@ function _link_by_name($name, $args=[]){
         }
         return _link($route['controller'],$route['view']);
     }
-    return false;
+    return _link();;
 }
 
 function redirect_to($controller = null, $view = null)
