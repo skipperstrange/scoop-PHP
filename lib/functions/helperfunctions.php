@@ -34,6 +34,22 @@ function _link(String $controller = '', String $view = ''){
     return  WEB_URL.$url;
 }
 
+
+function _link_by_name($name, $args=[]){
+    if(isset($name)&&trim($name)!==''){
+        $rouute = [];
+        $routes = ROUTES;
+        foreach($routes as $index => $value){
+            if(strtolower($routes[$index]['name'] == strtolower($name))){
+                $route = $routes[$index];
+                break;
+            }
+        }
+        return _link($route['controller'],$route['view']);
+    }
+    return false;
+}
+
 function redirect_to($controller = null, $view = null)
 {
     $url = _link($controller, $view);
