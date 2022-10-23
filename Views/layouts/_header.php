@@ -10,7 +10,7 @@
     <!-- javascript -->
     <?= generate_tag_group('script',$js) ?>
 
-    <?= create_tag_element('title','',$pageTitle) ?>
+    <?= create_tag_element('title','',_title($pageTitle)) ?>
 <!-- For tracking asyncronous activities N. B. Use either this or the one in footer for old method. Old method cannot track asyncronous activities.
         Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 <script>
