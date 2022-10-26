@@ -15,7 +15,8 @@
             "config/db.php",
             "lib/functions/sysfunctions.php",
             "lib/functions/helperfunctions.php",
-            "lib/functions/htmlfunctions.php"
+            "lib/functions/htmlfunctions.php",
+            "lib/functions/_customfxns.php"
         ]
     },
     "require-dev": {
