@@ -5,25 +5,23 @@
 if(IS_AJAX != 1){
 include_once VIEWS.'layouts'.DS.'_header.php';
 ?>
-        <div class="header-content">
-            <div class="container">
-                <div class="row">
+       <div role="main" class="main" id="main">
 <?php
 if(file_exists(VIEWS.$view.'.php')){
     @include_once VIEWS.$view.'.php';
 }
 else{
-    include_once VIEWS.'layouts'.DS.'_404.php';
+    $pageTitle = "404";
+    @include_once VIEWS.'layouts'.DS.'_404.php';
 }
 ?>
-                </div>
-            </div>
-        </div>
+   </div>
 <?php
 include_once VIEWS.'layouts'.DS.'_footer.php';
 }else{
     if(file_exists(VIEWS.$view.'.php')){
     @include_once VIEWS.$view.'.php';
+    @include_once PARTIALS.'_rerun_scripts.php';
 }
 }
 ?>
