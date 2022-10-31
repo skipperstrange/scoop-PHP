@@ -70,7 +70,7 @@ if(PRETTY_URLS == true){
     }
 }
 
-if(MAINENANCE == true){
+if(MAINTENANCE == true){
     $controller = 'maintenance';
     $view = "layouts".DS."maintenance";
 }
