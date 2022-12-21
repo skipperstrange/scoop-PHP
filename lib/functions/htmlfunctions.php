@@ -2,7 +2,7 @@
 
 //generates generates a set tag for a for an array of attributes
 function generate_tag_group($tag,$attributes_array, $close = true){
-    
+    $tags = '';
     foreach ($attributes_array as $info){
         $tags .= create_tag_element($tag, $info,'',$close);
     }
