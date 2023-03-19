@@ -11,7 +11,7 @@ include_once "vendor/autoload.php";
 
 if(MODE == 'development'){
     ini_set('display_errors',1);
-      error_reporting('E_ALL ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED & ~E_USER_NOTICE');
+     // error_reporting('E_ALL ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED & ~E_USER_NOTICE');
 }else{
     ini_set('display_errors',0);
 }
@@ -27,7 +27,6 @@ if(PRETTY_URLS == true){
      // holds the named captures, $_POST data
      $params = parse_params();
  
-
      //Process The query string to be suite route search parameters
     $url =  $_SERVER['REQUEST_URI'];
         // Removes Apllication root from url
