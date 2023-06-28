@@ -30,7 +30,7 @@ if(PRETTY_URLS == true){
      //Process The query string to be suite route search parameters
     $url =  $_SERVER['REQUEST_URI'];
         // Removes Apllication root from url
-    $url = str_replace('/' . APP . '/', '', $url);
+    $url = ltrim(str_replace('/' . APP . '/', '', $url));
     
     // Removes query string from $url we don't need it anymore affect routes.
      $url = @str_replace('?' . $_SERVER['QUERY_STRING'], '', $url);

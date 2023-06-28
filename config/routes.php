@@ -1,10 +1,11 @@
 <?php
 define("ROUTES", [
-//Example route format
-//# controller:aztrasC view:index
-['url'=>'@^home$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
+//Example route format fort index
+['url'=>'@^/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 
-//# controller:aztrasC view:index
+['url'=>'@^$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
+
+//# controller:index view:index
 ['url'=>'@^home\/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 
 //# controller:aztrasC view:index
