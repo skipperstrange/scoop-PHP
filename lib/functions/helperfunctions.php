@@ -1,6 +1,11 @@
 <?php
 
-// Generates the page title by appending the given title to the application name
+/**
+ * Generates the page title by appending the given title to the application name
+ *
+ * @param string $title The title to append (optional)
+ * @return string The generated page title
+ */
 function _title($title = '') {
     if (trim($title) == '') {
         return APP_NAME;
@@ -9,7 +14,12 @@ function _title($title = '') {
     }
 }
 
-// Generates the meta tag content by appending the given title to the application name
+/**
+ * Generates the meta tag content by appending the given title to the application name
+ *
+ * @param string $title The title to append (optional)
+ * @return string The generated meta tag content
+ */
 function _meta($title = '') {
     if (trim($title) == '') {
         return APP_NAME;
@@ -18,7 +28,13 @@ function _meta($title = '') {
     }
 }
 
-// Generates a URL based on the provided controller and view parameters
+/**
+ * Generates a URL based on the provided controller and view parameters
+ *
+ * @param string $controller The controller parameter (optional)
+ * @param string $view The view parameter (optional)
+ * @return string The generated URL
+ */
 function _link(String $controller = '', String $view = '') {
     $url = '';
 
@@ -51,7 +67,13 @@ function _link(String $controller = '', String $view = '') {
     return WEB_URL . $url;
 }
 
-// Generates a URL based on the provided route name
+/**
+ * Generates a URL based on the provided route name
+ *
+ * @param string $name The route name
+ * @param array $args Additional arguments (optional)
+ * @return string|false The generated URL or false if the route name is not found
+ */
 function _link_by_name($name, $args = []) {
     if (isset($name) && trim($name) !== '') {
         $route = null;
@@ -71,31 +93,60 @@ function _link_by_name($name, $args = []) {
     return false;
 }
 
-// Redirects to a specific controller and view
+/**
+ * Redirects to a specific controller and view
+ *
+ * @param string|null $controller The controller parameter (optional)
+ * @param string|null $view The view parameter (optional)
+ * @return void
+ */
 function redirect_to($controller = null, $view = null) {
     $url = _link($controller, $view);
     header('location:' . $url);
     exit();
 }
 
-// Generates a random string by hashing the given name and timestamp
+/**
+ * Generates a random string by hashing the given name and timestamp
+ *
+ * @param string|null $name The name to hash (optional)
+ * @return string The generated random string
+ */
 function generateRandom($name = null) {
     return sha1(md5($name . time()));
 }
 
-// Assigns values from an array to an object
+/**
+ * Assigns values from an array to an object
+ *
+ * @param object $object The object to assign values to
+ * @param array $array The array containing values to assign
+ * @return void
+ */
 function mapObjectValues($object, $array) {
     foreach ($array as $key => $value) {
         $object->$key = $value;
     }
 }
 
-// Encrypts the given value by hashing it
+/**
+ * Encrypts the given value by hashing it
+ *
+ * @param mixed $input The value to encrypt
+ * @return string The encrypted value
+ */
 function encryptValue($input) {
     return sha1(md5($input));
 }
 
-// Checks if a POST or GET value is not null
+/**
+ * Checks if a POST or GET value is not null
+ *
+ * @param string $post_or_get The type of request (post/get)
+ * @param string|null $key The key to check (optional)
+ * @param string|null $value The value to compare (optional)
+ * @return bool True if the value is not null, false otherwise
+ */
 function check_post_get($post_or_get, $key = null, $value = null) {
     if (trim($post_or_get) == 'post' || trim($post_or_get) == 'p') {
         if (isset($_POST[$key]) && trim($_POST[$key]) != '') {
@@ -111,7 +162,13 @@ function check_post_get($post_or_get, $key = null, $value = null) {
     return false;
 }
 
-// Retrieves a value from either the POST or GET array
+/**
+ * Retrieves a value from either the POST or GET array
+ *
+ * @param string $post_or_get The type of request (post/get)
+ * @param string|null $key The key to retrieve (optional)
+ * @return mixed|null The retrieved value or null if not found
+ */
 function post_get($post_or_get, $key = null) {
     if (check_post_get($post_or_get, $key)) {
         if (trim($post_or_get) == 'get' || trim($post_or_get) == 'g') {
@@ -125,7 +182,14 @@ function post_get($post_or_get, $key = null) {
     return null;
 }
 
-// Generates a JSON response
+/**
+ * Generates a JSON response
+ *
+ * @param mixed|null $message The response message (optional)
+ * @param int $code The response code (default: 200)
+ * @param array $headers Additional headers (default: empty array)
+ * @return string The encoded JSON response
+ */
 function json_response($message = null, $code = 200, $headers = ['']) {
     // Clear the old headers
     header_remove();
@@ -169,3 +233,4 @@ function json_response($message = null, $code = 200, $headers = ['']) {
         'message' => $message
     ));
 }
+
