@@ -18,7 +18,8 @@ define("ROUTES", [
 ['url'=>'@^product/(?P<id>\d+)/$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 ['url'=>'@^product/(?P<id>\d+)$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 //Strict for digits
-//['url'=>'@^product/(?P<id>\w+)/$@', 'name'=>'', 'controller'=>'admin', 'view'=>'admin/index'],
+['url'=>'@^product/(?P<id>\w+)/$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
+['url'=>'@^product/(?P<id>\w+)$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 
 //Special route for extracting static data from static folder.
 
