@@ -158,6 +158,16 @@ function check_post_get($post_or_get, $key = null, $value = null) {
             }
             return true;
         }
+    }elseif (trim($post_or_get) == 'get' || trim($post_or_get) == 'g') {
+        if (isset($_GET[$key]) && trim($_GET[$key]) != '') {
+            if (trim($value) != '') {
+                if (trim($_GET[$key]) == "$value") {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
     }
     return false;
 }

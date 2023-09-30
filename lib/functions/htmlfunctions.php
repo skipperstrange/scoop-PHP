@@ -77,3 +77,12 @@ function generate_attributes($attributes = null) {
 
     return $attributes_collection;
 }
+
+
+function _tag_group($tag, $attributes_array, $close = true) {
+    return generate_tag_group($tag, $attributes_array, $close);
+}
+
+function _tag($tag, $attributes = null, $content = '', $close = true){
+   return create_tag_element($tag, $attributes, $content, $close);
+}
