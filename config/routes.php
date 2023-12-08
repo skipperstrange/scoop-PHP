@@ -1,9 +1,9 @@
 <?php
 define("ROUTES", [
-//Example route format fort index
-['url'=>'@^/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
+//Example route format for index
+//['url'=>'@^/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 
-['url'=>'@^$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
+//['url'=>'@^$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 
 //# controller:index view:index
 ['url'=>'@^home\/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
@@ -13,13 +13,13 @@ define("ROUTES", [
 
 //#Passing parameters through route - (?P<parameter-name>\w)
 ['url'=>'@^product$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
-['url'=>'@^product/$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
+//['url'=>'@^product/$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 
 ['url'=>'@^product/(?P<id>\d+)/$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 ['url'=>'@^product/(?P<id>\d+)$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 //Strict for digits
 ['url'=>'@^product/(?P<id>\w+)/$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
-['url'=>'@^product/(?P<id>\w+)$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
+['url'=>'@^product/(?P<id>\d+)$@', 'name'=>'', 'controller'=>'product', 'view'=>'product'],
 
 //Special route for extracting static data from static folder.
 

@@ -44,7 +44,7 @@ if(PRETTY_URLS == true){
     // if match found appends $matches to $params
     // sets $route_match to true and also exits loop.
 
-        if (preg_match($route['url'], $url, $matches)) {
+        if (preg_match(rtrim($route['url'],'/'), rtrim($url,'/'), $matches)) {
             
             $params = array_merge($params, $matches);
 
