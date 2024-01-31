@@ -147,7 +147,7 @@ function encryptValue($input) {
  * @param string|null $value The value to compare (optional)
  * @return bool True if the value is not null, false otherwise
  */
-function check_post_get($post_or_get, $key = null, $value = null) {
+function check_post_get($post_or_get, $key = null, $value = '') {
     if (trim($post_or_get) == 'post' || trim($post_or_get) == 'p') {
         if (isset($_POST[$key]) && trim($_POST[$key]) != '') {
             if (trim($value) != '') {

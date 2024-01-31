@@ -61,7 +61,7 @@ if(PRETTY_URLS == true){
         }
     }
 }else{
-    //resort to the conventional query strin method of accessing parsed get data. i. e. (?controller=index&view=index...)
+    //resort to the conventional query string method of accessing parsed get data. i. e. (?controller=index&view=index...)
     $controller = @$_GET['controller'] ? @$_GET['controller']: 'index' ;
     if(MVC_MODE == 'strict'){
         $view = @$_GET['view'] ? @$_GET['view']: $controller ;

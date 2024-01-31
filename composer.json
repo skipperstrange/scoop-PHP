@@ -17,7 +17,7 @@
             "lib/functions/helperfunctions.php",
             "lib/functions/htmlfunctions.php",
             "lib/functions/_customfxns.php",
-            "lib/functions/_autoload.php"
+            "./_autoload.php"
         ]
     },
     "require-dev": {
