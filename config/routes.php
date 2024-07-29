@@ -2,7 +2,6 @@
 define("ROUTES", [
 //Example route format for index
 //['url'=>'@^/$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
-
 //['url'=>'@^$@', 'name'=>'', 'controller'=>'index', 'view'=>'index'],
 
 //# controller:index view:index

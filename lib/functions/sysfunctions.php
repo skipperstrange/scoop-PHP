@@ -5,7 +5,9 @@
  * @return string The active URL
  */
 function activeUrl(){
-    return WEB_URL.$_GET['uri'];
+    if(isset($_GET['uri'])){
+        return WEB_URL.$_GET['uri'];
+    }
 }
 
 /**
@@ -13,7 +15,9 @@ function activeUrl(){
  * @return string The active URI
  */
 function activeUri(){
-    return $_GET['uri'];
+    if(isset($_GET['uri'])){
+        return $_GET['uri'];
+    }
 }
 
 /**

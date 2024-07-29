@@ -6,7 +6,7 @@ $query = @$_POST['query'] ? @$_POST['query']: '' ;
 $excludedFiles = ['.','..'];
 $dataFiles = [];
 
-$files = scandir();
+$files = scandir(STATIC_DATA);
 
 foreach($files as $file){
     if(!in_array($file, $excludedFiles)){
